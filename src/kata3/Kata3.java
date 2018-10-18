@@ -5,13 +5,13 @@ public class Kata3 {
     public static void main(String[] args) {
         Histogram<String> histogram = new Histogram<>();
         
-        for(int i = 0; i <= 20; i++) histogram.increment("ulpgc.es");
+        histogram.increment("ulpgc.es",20);
         
-        for(int i = 0; i <= 12; i++) histogram.increment("ull.es");
+        histogram.increment("ull.es",5);
         
-        for(int i = 0; i <= 1; i++) histogram.increment("gmail.com");
+        histogram.increment("gmail.com",10);
 
-        for(int i = 0; i <= 4; i++) histogram.increment("hotmail.com");
+        histogram.increment("hotmail.com",2);
         
         new HistogramDisplay(histogram).execute();
     }
